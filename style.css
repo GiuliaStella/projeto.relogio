@@ -23,10 +23,10 @@ header{
     z-index: 3;
 }
 .logo{
-    font-family: "Orbitron", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 2rem;
     font-weight: 900;
-    color: #00f7ff;
+    color: #ff6a00;
     text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
 }
 header nav ul{
@@ -47,7 +47,7 @@ header nav ul li::after{
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #00f7ff;
+    background-color: #ff6a00;
     transition: width 0.5s ease; 
 
 }
@@ -124,12 +124,16 @@ header nav ul li:hover::after{
     filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
 
     /* animacao */
-    transform: translateX(200px);
+/* Estado Inicial (Escondido à direita) */
+    transform: translateX(100px); /* Reduzi um pouco para o movimento ser mais suave */
     opacity: 0;
-    transition: transform 0,6s ease, opacity 0.6s ease;
+    /* Correção: use ponto em 0.6s */
+    transition: transform 0.6s ease, opacity 0.6s ease;
     transition-delay: 1.0s;
 }
-.active .product-img img{
+
+.active .product-img img {
+    /* Estado Ativo (Entrada) */
     transform: translateX(0);
     opacity: 1;
 }
@@ -152,19 +156,22 @@ product-tag{
     margin-bottom: 10px;
 }
 .product-name{
-    font-size: 4.5rem;
-    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.1;
     margin-bottom: 20px;
 
     /* animacao */
+/* Estado Inicial (Escondido à direita) */
+    transform: translateX(100px); /* Adicionado para que ele também deslize */
     opacity: 0;
-    transition: transform 0,6s ease, opacity 0.6s ease;
+    /* Correção: use ponto em 0.6s */
+    transition: transform 0.6s ease, opacity 0.6s ease;
     transition-delay: 0.5s;
-
-
 }
-.active .product-name{
+
+.active .product-name {
+    /* Estado Ativo (Entrada) */
     transform: translateX(0);
     opacity: 1;
 }
@@ -178,7 +185,7 @@ product-tag{
 }
 .btn{
     padding: 12px 16px;
-    background: linear-gradient(#00f7ff, #0066ff);
+    background: linear-gradient(#ff6a00, #df4b0b);
     border-radius: 30px;
     color: #000;
     font-size: 1rem;
@@ -205,11 +212,11 @@ product-tag{
     border-radius: 50%;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0, 247, 255, 0.3); 
+    border: 1px solid rgba(255, 115, 0, 0.3); 
 }
 .arrows-btn:hover {
-    background-color: rgba(0, 247, 255, 0.3);
-    border: 1px solid #00f7ff; 
+    background-color: rgba(255, 115, 0, 0.3);
+    border: 1px solid #ff6a00; 
 }
 .indicators{
     position: absolute;
